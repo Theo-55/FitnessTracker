@@ -1,0 +1,19 @@
+{
+  "name": "fitnesstracker",
+  "version": "1.0.0",
+  "description": "class app to track all forms of fitness",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"this is a test\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Theo-55/FitnessTracker.git"
+  },
+  "author": "Thatcher Deyoe",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Theo-55/FitnessTracker/issues"
+  },
+  "homepage": "https://github.com/Theo-55/FitnessTracker#readme"
+}
