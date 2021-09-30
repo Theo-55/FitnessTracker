@@ -1,5 +1,5 @@
 body{
-    background-color: rgba(53, 53, 53, 0.918);
+    background-color: rgba(78, 110, 168, 0.918);
 }
 
 .card {
@@ -31,9 +31,16 @@ table{
     border: 2px, black;
     border-style: solid;
     background-color: rgba(240, 248, 255, 0.295);
-    width: auto;
+    width: 75%;
     padding: 3px;
-}  
-th{
+    margin: auto;
     text-align: center;
+}  
+
+p,h1{
+  color: aliceblue;
+}
+
+td{
+  color: white;
 }
