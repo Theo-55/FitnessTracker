@@ -1,0 +1,14 @@
+{
+  "name": "fitnesstracker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"error\""
+  },
+  "author": "Thatcher Deyoe",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
