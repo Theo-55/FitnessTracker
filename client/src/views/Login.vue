@@ -18,8 +18,7 @@
     export default {
         data: ()=>({
         username: null,
-        password: null,
-        Session
+        password: null
     })
 }
 </script>
