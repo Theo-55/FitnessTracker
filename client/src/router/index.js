@@ -4,7 +4,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
     {
-      path: '',
+      path: '/',
       name: 'Login',
       component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue'),
   
