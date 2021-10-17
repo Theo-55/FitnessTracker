@@ -18,12 +18,8 @@
       
         <div class="navbar-menu " :class="{'is-active': isActive }">
           <div class="navbar-start">
-          <router-link class="navbar-item is-tab" to="/" active-class="is-active" exact>
+          <router-link class="navbar-item is-tab" to="/home" active-class="is-active" exact>
               Home
-          </router-link>
-
-          <router-link class="navbar-item is-tab" to="/login" active-class="is-active" exact>
-              Login
           </router-link>
 
         <router-link class="navbar-item is-tab" to="/tracking" active-class="is-active" exact>
@@ -32,6 +28,10 @@
 
           <router-link class="navbar-item is-tab" to="/profile" active-class="is-active" exact>
               Profile
+          </router-link>
+
+          <router-link class="navbar-item is-tab" to="/addFriend" active-class="is-active" exact>
+              Add Friend
           </router-link>
 
           </div>
@@ -78,6 +78,8 @@
 </style>
 
 <script>
+
+
 export default {
 
 }

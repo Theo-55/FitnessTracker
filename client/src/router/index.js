@@ -4,19 +4,20 @@ import Home from '../views/Home.vue'
 import Login from '../views/Login.vue'
 import Tracking from '../views/Tracking.vue'
 import Profile from '../views/Profile.vue'
+import AddFriend from '../views/AddFriend'
 
 const routes = [
     {
       path: '/',
-      name: 'Home',
-      component: Home
-  
+      name: 'Login',
+      component: Login
+      // meta: { requiresLogin: true }
     },
 
     {
-      path: '/login',
-      name: 'Login',
-      component: Login
+      path: '/home',
+      name: 'Home',
+      component: Home
     },
 
     {
@@ -30,6 +31,13 @@ const routes = [
       path: '/profile',
       name: 'Profile',
       component: Profile
+
+    },
+
+    {
+      path: '/addFriend',
+      name: 'AddFriend',
+      component: AddFriend
 
     }
 

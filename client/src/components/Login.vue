@@ -38,12 +38,13 @@ export default {
     },
     methods: {
         login(){
-            this.Session.Login();
+            this.$router.push('/login');
+            //this.Session.Login();
         }
     },
     computed:{
         name(){
-            return this.Session.user.FirstName + ' ' + this.Session.user.LastName;
+            return this.Session.user.firstName + ' ' + this.Session.user.lastName;
         }
     }
 }
