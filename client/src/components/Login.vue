@@ -29,15 +29,24 @@
 
 
 <script>
-    export default {
-        name: "login",
-            data() {
-      return {
-        cssProps: {
-          backgroundImage: `url(${require('../assets/dark-barbell.jpg')})`
+import Session from "../services/session";
+export default {
+    data (){
+        return ({ 
+            Session
+        })
+    },
+    methods: {
+        login(){
+            this.Session.Login();
         }
-      }
+    },
+    computed:{
+        name(){
+            return this.Session.user.FirstName + ' ' + this.Session.user.LastName;
+        }
     }
-    }
-
+}
 </script>
+
+

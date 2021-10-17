@@ -2,45 +2,6 @@
 
     <div class="container">
 
-        <div class="header">
-             <h1>For The Love of Fitness</h1>
-        </div>
-    
-         <nav class="navbar is-transparent">
-        <div class="navbar-brand">
-          <a class="navbar-item">
-            <img src="../css/barbell.jpg" alt="Barbell logo" width="112" height="28">
-          </a>
-          <div class="navbar-burger" data-target="navbarExampleTransparentExample">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
-      
-        <div id="navbarExampleTransparentExample" class="navbar-menu">
-          <div class="navbar-start">
-            <a class="navbar-item" href="index.html">
-              Home
-            </a>
-
-            <a class="navbar-item" href="profile.html">
-                Profile 
-            </a>
-
-            <a class="navbar-item" href="tracking.html">
-                Tracking
-            </a>
-
-            <a class="navbar-item" href="addFriend.html">
-              Add Friend
-            </a>
-
-          </div>
-      
-          </div>
-         </nav>
-
                       <div class="tile is-ancestor">
         <div class="tile is-parent is-vertical">
           <article class="tile is-child box">
