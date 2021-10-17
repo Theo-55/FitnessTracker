@@ -1,7 +1,4 @@
 <template>
-
-
-
     <div class="container">
 
         <div class="header">
@@ -33,8 +30,41 @@
               Tracking
           </router-link>
 
+          <router-link class="navbar-item is-tab" to="/profile" active-class="is-active" exact>
+              Profile
+          </router-link>
 
           </div>
+
+
+            <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="field is-grouped">
+                <!-- <p class="control"> -->
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a class="navbar-link">
+                          Share
+                        </a>
+                
+                        <div class="navbar-dropdown">
+                          <a class="navbar-item">
+                            Instagram
+                          </a>
+                          <a class="navbar-item">
+                            Twitter
+                          </a>
+                          <a class="navbar-item">
+                            Facebook
+                          </a>
+                          <a class="navbar-item">
+                            SnapChat
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                <!-- </p> -->
+              </div>
+            </div>
       
           </div>
          </nav>

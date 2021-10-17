@@ -1,0 +1,27 @@
+.header{
+    width: 100%;
+    height: 90px;
+    background-image: url('chalkboard-blackboard-dark-wallpaper-background_28629-1125.jpg');
+    margin: auto;
+}
+ 
+header, h1{
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+}
+
+table{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+    background-color: white;
+}
+
+tr{
+    border: 2px, black;
+}
+
