@@ -1,17 +1,17 @@
 <template>
     <div class="container">
-            <Nav />
+            <Header />
             <router-view />
     </div>
 </template>
 
 <script>
-import Nav from '../src/components/Nav.vue'
+import Header from '../src/components/Header.vue'
 
 export default{
     name:'App',
     components: {
-        Nav
+        Header
     }
 }
 </script>
