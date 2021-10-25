@@ -12,7 +12,7 @@
         <div class="register">
         <h1>Register</h1>
         <form method="post" action="" name="register">
-            <input type="text" name="username" placeholder="username" required>
+            <input type="text" name="username" placeholder="username"  required>
             <input type="password" name="password" placeholder="password" required>
             <input type="email" name="email" placeholder="Preferred email">
             <input type="submit" name="register" value="Register">

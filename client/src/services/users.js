@@ -3,7 +3,7 @@ const list = [
     { 
         firstName: 'Theo',
         lastName: 'Deyoe',
-        handle: '@theo',
+        handle: 'theo',
         password: 'me',
         isAdmin: true,
         email: [
@@ -42,7 +42,6 @@ export function Update(user_id, user) {
     if(user.pic){
         oldObj.pic = user.pic;
     }
-    //list[user_id] = newObj ;
     return { ...oldObj, password: undefined };
 }
 
