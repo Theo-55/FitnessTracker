@@ -2,7 +2,7 @@
     <div class="container">
         <nav class="navbar" role="navigation" aria-label="main navigation">
             <div class="navbar-brand">
-              <a class="navbar-item" href="https://bulma.io">
+              <a class="navbar-item" >
                 <img src="barbell.jpg" width="112" height="28">
               </a>
           
@@ -31,7 +31,7 @@
                     Delete
                 </a>
 
-                <a class="navbar-item" href="index.html">
+                <a class="navbar-item" href="App.vue">
                   Home
               </a>
                 </div>
