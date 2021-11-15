@@ -31,7 +31,7 @@
                     Delete
                 </a>
 
-                <a class="navbar-item" href="App.vue">
+                <a class="navbar-item" href="Home.vue">
                   Home
               </a>
                 </div>
@@ -83,26 +83,26 @@
 
 <script>
 
-const create = document.getElementById('update');
+// const create = document.getElementById('update');
 
-create.onclick = function (){
-   const table = document.getElementById('trackingHistory');
-    const Excercise = document.getElementById('pastExcercise');
-    const Reps = document.getElementById('pastReps');
-    const Time = document.getElementById('pastTimes');
-    const Date = document.getElementById('pastDates');
+// create.onclick = function (){
+//    const table = document.getElementById('trackingHistory');
+//     const Excercise = document.getElementById('pastExcercise');
+//     const Reps = document.getElementById('pastReps');
+//     const Time = document.getElementById('pastTimes');
+//     const Date = document.getElementById('pastDates');
 
-      if ((table.tbody).length == 0) {
-            table.append("<tbody></tbody>");
-        }
+//       if ((table.tbody).length == 0) {
+//             table.append("<tbody></tbody>");
+//         }
         
-        table.tbody.append("<tr>" +
-            "<td>" + Excercise.val() + "</td>"+
-            "<td>" + Reps.val() + "</td>" +
-            "<td>" + Time.val() + "</td>" +
-            "<td>" + Date.val() + "</td>" +
-            "</tr>");
-}
+//         table.tbody.append("<tr>" +
+//             "<td>" + Excercise.val() + "</td>"+
+//             "<td>" + Reps.val() + "</td>" +
+//             "<td>" + Time.val() + "</td>" +
+//             "<td>" + Date.val() + "</td>" +
+//             "</tr>");
+// }
   
 </script>
 
