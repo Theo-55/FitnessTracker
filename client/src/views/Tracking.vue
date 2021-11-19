@@ -1,43 +1,55 @@
 <template>
+  <div class="section">
+      <h1 class="title" style="background-color: white;"> Tracking Page </h1>
+      
+      <div class="columns">
 
-            <div class="card" style="background-color: #777b7ec2;">
-  <div class="card-image">
-    <figure class="image is-4by3">
-      <img src="https://bulma.io/images/placeholders/1280x960.png" alt="Placeholder image">
-    </figure>
-  </div>
-  <div class="card-content" style="background-color: #777b7ec2;">
-    <div class="media">
-      <div class="media-left">
-        <figure class="image is-48x48">
-          <img src="https://bulma.io/images/placeholders/96x96.png" alt="Placeholder image">
-        </figure>
+          <!--
+          <div class="column">
+              <div class="card">
+                  <div class="card-content">
+                      {{newPost}}
+                  </div>
+              </div>
+          </div>
+            -->
+        <div class="column is-half is-offset-one-quarter ">
+
+            <post-edit :new-post="newPost" @add="add()" />
+
+            <div class="post" v-for=" (p, i) in posts" :key="p.src">
+                <post :post="p" @remove="remove(p, i)" />
+            </div>
+
+        </div>
+
+        <div class="column">
+            <post :post="newPost" />
+        </div>
       </div>
-      <div class="media-content">
-        <p class="title is-4">John Smith</p>
-        <p class="subtitle is-6">@johnsmith</p>
-      </div>
-    </div>
 
-    <div class="content">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-      Phasellus nec iaculis mauris. <a>@bulmaio</a>.
-      <a href="#">#css</a> <a href="#">#responsive</a>
-      <br>
-      <time datetime="2016-1-1">11:09 PM - 1 Jan 2016</time>
-    </div>
+
   </div>
-</div>
-
-
-
-
 </template>
 
 <script>
+import Post from '../components/Tracking.vue';
+import session from "../services/session";
 
+const newPost = ()=> ({ user: session.user, user_handle: session.user.handle })
+export default {
+    components: {
+        Post,
+    },
+    data: ()=> ({
+        posts: [],
+        newPost: newPost()
+    })
+}
 </script>
 
-<style src="../css/tracking.css">
-
+<style>
+    .card {
+        margin-bottom: 10px;
+    }
 </style>
