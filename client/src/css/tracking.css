@@ -11,17 +11,4 @@ header, h1{
     font-size: xx-large;
 }
 
-table{
-    width: 50%;
-    margin: auto;
-    text-align: center;
-    border: 2px;
-    border-style: solid;
-    border-color: black;
-    background-color: white;
-}
-
-tr{
-    border: 2px, black;
-}
 
