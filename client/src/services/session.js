@@ -3,23 +3,36 @@ import { Login } from "./users";
 
 const session = {
     user: null,
-    messages: [],
-    toRoute: '/home',
-    Login(handle, password){
+    messages: [],       // {text: string, type: string }
+    toRoute: '/feed',
+    async Login(handle, password){
 
-        try{
-        const response = Login(handle, password);
+        try {
+            const response = await Login(handle, password);
 
-        this.user = response.user;
+            this.user = response.user;
+    
+            router.push(this.toRoute);
+                
+        } catch (error) {
+            this.Error(error);
+        }
+    },
+    Error(error){
+        console.error(error);
+        const msg = error.msg ?? error;
 
-        router.push(this.toRoute);
+        this.messages.push({ text: msg, type: 'warning' })
+        // NotificationProgrammatic.open({
+        //     duration: 5000,
+        //     message: msg,
+        //     variant: 'danger',
+        //     type: 'danger',
+        //     closable: true,
 
-    }catch (error) {
-        throw { code: 401, msg: "Error occured" };
+        // })
+
     }
-}
 };
 
 export default session;
-
-//export function

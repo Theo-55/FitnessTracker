@@ -4,7 +4,6 @@
 */
 const express = require("express");
 const model = require("../models/posts");
-const comments = require("../models/comments");
 
 const app = express.Router();
 
@@ -28,26 +27,6 @@ app
         model   .Search(req.query.q)
                 .then( x=> res.send(x) )
                 .catch(next)    
-    })
-    .get("/comments/:id", (req, res, next) =>{
-        comments.Get(req.params.id)
-                .then( x=> res.send(x) )
-                .catch(next)    
-    })
-    .post("/:id/comments", (req, res, next) =>{
-        comments.Add(req.params.id, req.body)
-                .then( x=> res.status(201).send(x.insertedComment) )
-                .catch(next)
-    })
-    .patch("/comments/:id", (req, res, next) =>{
-        comments.Update(req.params.id, req.body)
-                .then( x=> res.send(x) )
-                .catch(next) 
-    })
-    .delete("/comments/:id", (req, res, next) =>{
-        comments.Delete(req.params.id)
-                .then( x=> res.send({ deleted: x }) )
-                .catch(next) 
     })
     .get("/:id", (req, res, next) =>{
         model   .Get(req.params.id)

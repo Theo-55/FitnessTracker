@@ -7,55 +7,28 @@ const app = express.Router();
 
 app
     .get("/", (req, res, next) =>{
-        model.GetAll()
-        .then(user=>{ 
-            res.send(user);
-        })
-        .catch(next) 
+        res.send(model.GetAll());
     })
     .get("/:user_id", (req, res, next) =>{
-         model.Get(req.params.user_id)
-            .then(user=>{ 
-                res.send(user);
-            })
-            .catch(next) 
-    })
-    .patch("/:user_id", (req, res, next) =>{
-
-        model   .Update(req.params.user_id, req.body)
-                .then( user=> res.send(user) )
-                .catch(next) 
-
-    })
-    .delete("/:user_id", (req, res, next) =>{
-
-        model   .Delete(req.params.user_id)
-                .then( user=> res.send({ deleted: user }) )
-                .catch(next) 
-
+        res.send(model.Get(req.params.user_id));
     })
     .post("/login", (req, res, next) =>{
-
-        model.Login(req.body.handle, req.body.password)
-            .then(user=>{ 
-                res.send(user);
-            })
-            .catch(next) 
-
+        model.Login(req.body.handle, req.body.password, (err, user)=>{
+            if(err){
+                next(err); return;
+            }
+            res.send(user);
+        }); 
     })
     .post("/register", (req, res, next) =>{
-        model.Add(req.body)
-            .then(user=>{
-                res.status(201).send(user);
-            })
-            .catch(next) 
-    })
-    .post("/seed", (req, res, next) =>{
-        model.Seed()
-            .then(user=>{
-                res.status(201).send("Created");
-            })
-            .catch(next) 
-    })
 
+        const user = req.body;
+
+        model.Add(user, (err, user)=>{
+            if(err){
+                next(err); return;
+            }
+            res.status(201).send(user);
+        }); 
+    })
 module.exports = app;
