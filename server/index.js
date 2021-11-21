@@ -28,7 +28,7 @@ app
 
     .use(express.json())
     .use('/users', usersController )
-    // .use('/posts', postsController)
+    .use('/posts', postsController)
 
 app
     .get('*', (req, res) => res.sendFile(path.join(__dirname, '../docs/index.html')) )
