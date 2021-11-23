@@ -66,13 +66,13 @@ http://localhost:3100/posts
 
 
 ###
-http://localhost:3100/posts/618caf150c80331dc116b4f6
+http://localhost:3100/posts/619bf0df182e729949616a6d
 
 ###
-http://localhost:3100/posts/wall/@JewPaltz
+http://localhost:3100/posts/wall/@theo
 
 ###
-http://localhost:3100/posts/feed/@JewPaltz
+http://localhost:3100/posts/feed/@theo
 
 ###
 http://localhost:3100/posts/search?q=never
@@ -85,7 +85,7 @@ Content-Type: application/json
     "src": "https://apod.nasa.gov/apod/image/2111/MilkyWayWaterfall_XieJie_960.jpg",
     "alt": "A Waterfall and the Milky Way",
     "caption": "A Waterfall and the Milky Way",
-    "user_handle": "@JewPaltz",
+    "user_handle": "@theo",
     "isPublic": true
 }
 

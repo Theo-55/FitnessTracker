@@ -12,7 +12,6 @@ const routes = [
       path: '/',
       name: 'Login',
       component: Login
-      // meta: { requiresLogin: true }
     },
 
     {

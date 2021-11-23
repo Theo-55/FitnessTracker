@@ -1,6 +1,6 @@
-
 const express = require("express");
 const model = require("../models/posts");
+
 
 const app = express.Router();
 
@@ -25,6 +25,7 @@ app
                 .then( x=> res.send(x) )
                 .catch(next)    
     })
+ 
     .get("/:id", (req, res, next) =>{
         model   .Get(req.params.id)
                 .then( x=> res.send(x) )
