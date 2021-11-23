@@ -5,6 +5,7 @@ import Login from '../views/Login.vue'
 import Tracking from '../views/Tracking.vue'
 import Profile from '../views/Profile.vue'
 import AddFriend from '../views/AddFriend'
+import Session from '../services/session';
 
 const routes = [
     {
@@ -48,5 +49,14 @@ const routes = [
     history: createWebHistory(process.env.BASE_URL),
     routes
   })
+
+  router.beforeEach((to, from, next) => {
+    if(to.meta.requiresLogin && !Session.user){
+        next('/Home');
+    }else{
+        next();
+    }
+  } )
+
 
   export default router

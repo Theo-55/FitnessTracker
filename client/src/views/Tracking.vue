@@ -13,7 +13,7 @@
               </div>
           </div>
             -->
-        <div class="column is-half is-offset-one-quarter ">
+        <div class="column is-one-third is-offset-one-third ">
 
             <post-edit :new-post="newPost" @add="add()" />
 
