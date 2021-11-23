@@ -12,13 +12,13 @@ export function Add(user) {
 }
 
 
-// export function Update(user_id, user) {
-//     return api('users/' + user_id, user, 'PATCH');
-// }
+export function Update(user_id, user) {
+    return api('users/' + user_id, user, 'PATCH');
+}
 
-// export function Delete(user_id) {
-//     return api('users/' + user_id, {}, 'DELETE');
-// }
+export function Delete(user_id) {
+    return api('users/' + user_id, {}, 'DELETE');
+}
 
 export function Login(handle, password){
     return api('users/login', { handle, password });

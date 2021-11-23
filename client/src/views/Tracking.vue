@@ -1,6 +1,6 @@
 <template>
   <div class="section">
-      <h1 class="title" style="background-color: white;"> Tracking Page </h1>
+      <h1 class="title"> Feed Page </h1>
       
       <div class="columns">
 
@@ -13,11 +13,14 @@
               </div>
           </div>
             -->
-        <div class="column is-one-third is-offset-one-third ">
+        <div class="column is-half is-offset-one-quarter">
 
-                <div class="post" v-for="p in posts" :key="p.src">
-                <post :post="p" />
+            <post-edit :new-post="newPost" @add="add()" />
+
+            <div class="post" v-for=" (p, i) in posts" :key="p.src">
+                <post :post="p" @remove="remove(p, i)" />
             </div>
+
         </div>
 
         <div class="column">
@@ -30,14 +33,15 @@
 </template>
 
 <script>
-import Post from '../components/Tracking.vue';
+import Post from '../components/Post.vue';
 import session from "../services/session";
 import { Add, Delete, GetFeed } from "../services/posts";
-
+import PostEdit from "../components/Post-edit.vue";
 const newPost = ()=> ({ user: session.user, user_handle: session.user.handle })
 export default {
     components: {
         Post,
+        PostEdit
     },
     data: ()=> ({
         posts: [],
@@ -65,7 +69,6 @@ export default {
         }
     }
 }
-
 </script>
 
 <style>
