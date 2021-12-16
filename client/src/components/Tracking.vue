@@ -25,6 +25,16 @@
     <div class="content">
       {{post.caption}}
     </div>
+    <div class="content">
+  <section>
+    <p class="content"><b>Selected:</b> {{ selected }}</p>
+    <o-field label="Find a friend you worked out with">
+      <o-autocomplete rounded expanded v-model="name" :data="filteredDataArray" placeholder="e.g. jQuery" icon="search" clearable @select="option => selected = option">
+        <template slot="empty">No results found</template>
+      </o-autocomplete>
+    </o-field>
+  </section>
+    </div>
   </div>
     <footer class="card-footer">
         <a href="#" class="card-footer-item">Save</a>
@@ -48,8 +58,33 @@ export default {
             }
             
         }
+    }, 
+
+        data() {
+      return {
+        data: ['Angular', 'Angular 2', 'Aurelia', 'Backbone', 'Ember', 'jQuery', 'Meteor', 'Node.js', 'Polymer', 'React', 'RxJS', 'Vue.js'],
+        name: '',
+        selected: null
+      }
+    },
+    computed2: {
+      filteredDataArray() {
+        return this.data.filter(option => {
+          return (
+            option
+              .toString()
+              .toLowerCase()
+              .indexOf(this.name.toLowerCase()) >= 0
+          )
+        })
+      }
     }
-}
+  }
+
+
+
+
+
 </script>
 
 <style>

@@ -87,6 +87,24 @@ module.exports.GetFeed_ = function GetFeed_(handle) {
 
 }
 
+module.exports.FindFriend = async function (handle){
+    const user = await Users.collection.findOne({ handle });
+    if(!user){
+        throw{ code:404, msg: "user does not exist in database"};
+    }
+
+    var allfollowingArray = db.following.find().toArray();
+
+    return this.data.filter(option => {
+        return (
+          option
+            .toString()
+            .toLowerCase()
+            .indexOf(this.name.toLowerCase()) >= 0
+        )
+      })
+}
+
 module.exports.GetFeed = async function (handle) {
     //  The "MongoDB" way to do things. (Should test with a large `following` array)
     const user = await Users.collection.findOne({ handle });
